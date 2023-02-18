@@ -30,7 +30,9 @@ public class RomanNumeralTest {
     }
 
     @Test
-    void sixGivesVI() {assertEquals("VI", RomanNumeralConverter.toRomanNumeral(6));}
+    void sixGivesVI() {
+        assertEquals("VI", RomanNumeralConverter.toRomanNumeral(6));
+    }
 
     @Test
     void sevenGivesVII() {
@@ -48,143 +50,144 @@ public class RomanNumeralTest {
     }
 
     @Test
-    void tenGivesX () {
+    void tenGivesX() {
         assertEquals("X", RomanNumeralConverter.toRomanNumeral(10));
     }
 
     @Test
-    void elevenGivesXI () {
+    void elevenGivesXI() {
         assertEquals("XI", RomanNumeralConverter.toRomanNumeral(11));
     }
+
     @Test
-    void twelveGivesXII () {
+    void twelveGivesXII() {
         assertEquals("XII", RomanNumeralConverter.toRomanNumeral(12));
     }
 
     @Test
-    void thirteenGivesXIII () {
+    void thirteenGivesXIII() {
         assertEquals("XIII", RomanNumeralConverter.toRomanNumeral(13));
     }
 
     @Test
-    void fourteenGivesXIV () {assertEquals("XIV", RomanNumeralConverter.toRomanNumeral(14));}
+    void fourteenGivesXIV() {
+        assertEquals("XIV", RomanNumeralConverter.toRomanNumeral(14));
+    }
 
     @Test
-    void fifteenGivesXV () {
+    void fifteenGivesXV() {
         assertEquals("XV", RomanNumeralConverter.toRomanNumeral(15));
     }
 
     @Test
-    void sixteenGivesXVI () {
+    void sixteenGivesXVI() {
         assertEquals("XVI", RomanNumeralConverter.toRomanNumeral(16));
     }
 
     @Test
-    void seventeenGivesXVII () {
+    void seventeenGivesXVII() {
         assertEquals("XVII", RomanNumeralConverter.toRomanNumeral(17));
     }
 
     @Test
-    void eighteenGivesXVIII () {
+    void eighteenGivesXVIII() {
         assertEquals("XVIII", RomanNumeralConverter.toRomanNumeral(18));
     }
 
     @Test
-    void nineteenGivesXIX () {
+    void nineteenGivesXIX() {
         assertEquals("XIX", RomanNumeralConverter.toRomanNumeral(19));
     }
 
     @Test
-    void twentyGivesXX () {
+    void twentyGivesXX() {
         assertEquals("XX", RomanNumeralConverter.toRomanNumeral(20));
     }
 
     @Test
-    void twentyGivesXXI () {
+    void twentyGivesXXI() {
         assertEquals("XXI", RomanNumeralConverter.toRomanNumeral(21));
     }
 
     @Test
-    void twentyFourGivesXXIV () {
+    void twentyFourGivesXXIV() {
         assertEquals("XXIV", RomanNumeralConverter.toRomanNumeral(24));
     }
 
     @Test
-    void twentyFiveGivesXXV () {
+    void twentyFiveGivesXXV() {
         assertEquals("XXV", RomanNumeralConverter.toRomanNumeral(25));
     }
 
     @Test
-    void thirtyGivesXXX () {
+    void thirtyGivesXXX() {
         assertEquals("XXX", RomanNumeralConverter.toRomanNumeral(30));
     }
 
     @Test
-    void thirtyFourGivesXXXIV () {
+    void thirtyFourGivesXXXIV() {
         assertEquals("XXXIV", RomanNumeralConverter.toRomanNumeral(34));
     }
 
     @Test
-    void fiftyGivesL () {
+    void fiftyGivesL() {
         assertEquals("L", RomanNumeralConverter.toRomanNumeral(50));
     }
 
     @Test
-    void sixtyGivesLX () {
+    void sixtyGivesLX() {
         assertEquals("LX", RomanNumeralConverter.toRomanNumeral(60));
     }
 
     @Test
-    void seventyGivesLXX () {
+    void seventyGivesLXX() {
         assertEquals("LXX", RomanNumeralConverter.toRomanNumeral(70));
     }
 
     @Test
-    void ninetyGivesXC () {
+    void ninetyGivesXC() {
         assertEquals("XC", RomanNumeralConverter.toRomanNumeral(90));
     }
 
     @Test
-    void oneHundredGivesC () {
+    void oneHundredGivesC() {
         assertEquals("C", RomanNumeralConverter.toRomanNumeral(100));
     }
 
     @Test
-    void fiveHundredGivesXX () {
+    void fiveHundredGivesXX() {
         assertEquals("D", RomanNumeralConverter.toRomanNumeral(500));
     }
 
     @Test
-    void sevenHundredFiftyGivesXX () {
+    void sevenHundredFiftyGivesXX() {
         assertEquals("DCCL", RomanNumeralConverter.toRomanNumeral(750));
     }
 
     @Test
-    void oneThousandGivesXX () {
+    void oneThousandGivesXX() {
         assertEquals("M", RomanNumeralConverter.toRomanNumeral(1000));
     }
 
     @Test
-    void sevenHundredFiftyTwo () {
+    void sevenHundredFiftyTwo() {
         assertEquals("DCCLII", RomanNumeralConverter.toRomanNumeral(752));
     }
 
     @Test
-    void oneThousandSevenHundredTwentyTwo () {
+    void oneThousandSevenHundredTwentyTwo() {
         assertEquals("MDCCXXIV", RomanNumeralConverter.toRomanNumeral(1724));
     }
 
     @Test
-    void fourThousandFiveHundredTwentyTwo () {
+    void fourThousandFiveHundredTwentyTwo() {
         assertEquals("MMMMDXXII", RomanNumeralConverter.toRomanNumeral(4522));
     }
 
     @Test
-    void maxFiveHundredTwentyTwo () {
+    void maxFiveHundredTwentyTwo() {
         assertEquals("MMMMMMMMMCMXCIX", RomanNumeralConverter.toRomanNumeral(9999));
     }
-
-
 
 
 }

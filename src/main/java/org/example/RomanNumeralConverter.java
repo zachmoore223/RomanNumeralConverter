@@ -1,8 +1,32 @@
 package org.example;
 
+import java.sql.SQLOutput;
+import java.util.Scanner;
+
 public class RomanNumeralConverter {
     public static void main(String[] args) {
-                System.out.println("Hello world!");
+        boolean keepTesting = true;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Welcome to Roman Numeral Converter!");
+        while (keepTesting == true) {
+            String keepGoing = "";
+            int numberToConvert = 10000;
+            while (numberToConvert > 9999) {
+                System.out.print("Please enter a number from 1 to 9999: ");
+                numberToConvert = scanner.nextInt();
+            }
+            String roman = toRomanNumeral(numberToConvert);
+            System.out.println(numberToConvert + " becomes " + roman + "\n");
+            scanner.nextLine();
+            System.out.print("Would you like to try another (y/n)? ");
+            keepGoing = scanner.nextLine();
+
+            if (keepGoing.equals("n")){
+                keepTesting = false;
+                System.out.println("Thank you. Goodbye!");
+            }
+
+        }
     }
 
 
@@ -42,70 +66,74 @@ public class RomanNumeralConverter {
         return romanNumeral;
 
     }
+
     //M = 1,000, D = 500, C = 100, L = 50, X = 10
     //thousands breaks patter since roman numerals do not technically go up beyond 3999
     //this allows it to go to 9999 by adding the number of M's accordingly
-    private static String thousandsPlace (String romanNumeral, int[] numbers, int index) {
-        for (int i = 0; i < numbers[index]; i++){
+    private static String thousandsPlace(String romanNumeral, int[] numbers, int index) {
+        for (int i = 0; i < numbers[index]; i++) {
             romanNumeral = romanNumeral + "M";
         }
         return romanNumeral;
     }
+
     //M = 1,000, D = 500, C = 100, L = 50, X = 10
     //Need CM for 900 (ie 1000 minus 100)
     //Each one follows same pattern
     //check the hundreds place number and convert it appropriately
-    private static String hundredsPlace (String romanNumeral, int[] numbers, int index) {
-        if(numbers[index] == 9){
+    private static String hundredsPlace(String romanNumeral, int[] numbers, int index) {
+        if (numbers[index] == 9) {
             romanNumeral = romanNumeral + "CM";
-        } else if (numbers[index]==8){
+        } else if (numbers[index] == 8) {
             romanNumeral = romanNumeral + "DCCC";
-        } else if (numbers[index]==7){
+        } else if (numbers[index] == 7) {
             romanNumeral = romanNumeral + "DCC";
-        } else if (numbers[index]==6){
+        } else if (numbers[index] == 6) {
             romanNumeral = romanNumeral + "DC";
-        } else if (numbers[index]==5){
+        } else if (numbers[index] == 5) {
             romanNumeral = romanNumeral + "D";
-        } else if (numbers[index]==4){
+        } else if (numbers[index] == 4) {
             romanNumeral = romanNumeral + "CD";
-        } else if (numbers[index]==3){
+        } else if (numbers[index] == 3) {
             romanNumeral = romanNumeral + "CCC";
-        } else if (numbers[index]==2){
+        } else if (numbers[index] == 2) {
             romanNumeral = romanNumeral + "CC";
-        } else if (numbers[index]==1){
+        } else if (numbers[index] == 1) {
             romanNumeral = romanNumeral + "C";
         }
         return romanNumeral;
     }
+
     //C = 100, L = 50, X = 10
     //Need C since 90 would be XC
     //check the tens place number and convert it appropriately
-    private static String tensPlace (String romanNumeral, int[] numbers, int index) {
-        if(numbers[index] == 9){
+    private static String tensPlace(String romanNumeral, int[] numbers, int index) {
+        if (numbers[index] == 9) {
             romanNumeral = romanNumeral + "XC";
-        } else if (numbers[index]==8){
+        } else if (numbers[index] == 8) {
             romanNumeral = romanNumeral + "LXXX";
-        } else if (numbers[index]==7){
+        } else if (numbers[index] == 7) {
             romanNumeral = romanNumeral + "LXX";
-        } else if (numbers[index]==6){
+        } else if (numbers[index] == 6) {
             romanNumeral = romanNumeral + "LX";
-        } else if (numbers[index]==5){
+        } else if (numbers[index] == 5) {
             romanNumeral = romanNumeral + "L";
-        } else if (numbers[index]==4){
+        } else if (numbers[index] == 4) {
             romanNumeral = romanNumeral + "XL";
-        } else if (numbers[index]==3){
+        } else if (numbers[index] == 3) {
             romanNumeral = romanNumeral + "XXX";
-        } else if (numbers[index]==2){
+        } else if (numbers[index] == 2) {
             romanNumeral = romanNumeral + "XX";
-        } else if (numbers[index]==1){
+        } else if (numbers[index] == 1) {
             romanNumeral = romanNumeral + "X";
         }
         return romanNumeral;
     }
+
     //X = 10, I = 1
     //check the ones place and convert it appropriately
     //no X because that'd move to tens place
-    private static String onesPlace (String romanNumeral, int[] numbers, int index) {
+    private static String onesPlace(String romanNumeral, int[] numbers, int index) {
         if (numbers[index] == 9) {
             romanNumeral = romanNumeral + "IX";
         } else if (numbers[index] == 8) {

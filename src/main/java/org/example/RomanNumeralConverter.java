@@ -17,6 +17,12 @@ public class RomanNumeralConverter {
             numbers[i] = Character.getNumericValue(temp.charAt(i));
         }
 
+        if (numbers.length == 3) {
+            romanNumeral = hundredsPlace(romanNumeral, numbers, 0);
+            romanNumeral = tensPlace(romanNumeral, numbers, 1);
+            romanNumeral = onesPlace(romanNumeral, numbers, 2);
+        }
+
         if (numbers.length == 2) {
             romanNumeral = tensPlace(romanNumeral, numbers, 0);
             romanNumeral = onesPlace(romanNumeral, numbers, 1);
@@ -28,6 +34,32 @@ public class RomanNumeralConverter {
 
         return romanNumeral;
 
+    }
+    //M = 1,000, D = 500, C = 100, L = 50, X = 10
+    //Need CM for 900 (ie 1000 minus 100)
+    //Each one follows same pattern
+    //check the tens place number and convert it appropriately
+    private static String hundredsPlace (String romanNumeral, int[] numbers, int index) {
+        if(numbers[index] == 9){
+            romanNumeral = romanNumeral + "CM";
+        } else if (numbers[index]==8){
+            romanNumeral = romanNumeral + "DCCC";
+        } else if (numbers[index]==7){
+            romanNumeral = romanNumeral + "DCC";
+        } else if (numbers[index]==6){
+            romanNumeral = romanNumeral + "DC";
+        } else if (numbers[index]==5){
+            romanNumeral = romanNumeral + "D";
+        } else if (numbers[index]==4){
+            romanNumeral = romanNumeral + "CD";
+        } else if (numbers[index]==3){
+            romanNumeral = romanNumeral + "CCC";
+        } else if (numbers[index]==2){
+            romanNumeral = romanNumeral + "CC";
+        } else if (numbers[index]==1){
+            romanNumeral = romanNumeral + "C";
+        }
+        return romanNumeral;
     }
     //C = 100, L = 50, X = 10
     //Need C since 90 would be XC

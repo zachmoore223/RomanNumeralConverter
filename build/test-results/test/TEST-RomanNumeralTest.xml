@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RomanNumeralTest" tests="19" skipped="0" failures="0" errors="0" timestamp="2023-02-18T14:40:49" hostname="LAPTOP-MCQCABGU" time="0.051">
+<testsuite name="RomanNumeralTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-18T14:50:49" hostname="LAPTOP-MCQCABGU" time="0.021">
   <properties/>
-  <testcase name="nineteenGivesXIX()" classname="RomanNumeralTest" time="0.019"/>
-  <testcase name="sixGivesVI()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="fourGivesIV()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="threeGivesIII()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="fourteenGivesXIV()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="twoGivesII()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="sevenGivesVII()" classname="RomanNumeralTest" time="0.0"/>
-  <testcase name="elevenGivesXI()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="seventeenGivesXVII()" classname="RomanNumeralTest" time="0.0"/>
-  <testcase name="thirteenGivesXIII()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="eightGivesV()" classname="RomanNumeralTest" time="0.0"/>
-  <testcase name="fifteenGivesXV()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="nineGivesIX()" classname="RomanNumeralTest" time="0.0"/>
-  <testcase name="oneGivesI()" classname="RomanNumeralTest" time="0.0"/>
-  <testcase name="tenGivesX()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="fiveGivesV()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="sixteenGivesXVI()" classname="RomanNumeralTest" time="0.0"/>
-  <testcase name="eighteenGivesXVIII()" classname="RomanNumeralTest" time="0.001"/>
-  <testcase name="twelveGivesXII()" classname="RomanNumeralTest" time="0.0"/>
+  <testcase name="ninetyGivesXC()" classname="RomanNumeralTest" time="0.021"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

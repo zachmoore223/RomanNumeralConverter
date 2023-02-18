@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RomanNumeralTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-18T14:22:24" hostname="LAPTOP-MCQCABGU" time="0.021">
+  <properties/>
+  <testcase name="oneGivesI()" classname="RomanNumeralTest" time="0.021"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

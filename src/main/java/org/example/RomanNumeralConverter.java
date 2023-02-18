@@ -17,6 +17,13 @@ public class RomanNumeralConverter {
             numbers[i] = Character.getNumericValue(temp.charAt(i));
         }
 
+        if (numbers.length == 4) {
+            romanNumeral = thousandsPlace(romanNumeral, numbers, 0);
+            romanNumeral = hundredsPlace(romanNumeral, numbers, 1);
+            romanNumeral = tensPlace(romanNumeral, numbers, 2);
+            romanNumeral = onesPlace(romanNumeral, numbers, 3);
+        }
+
         if (numbers.length == 3) {
             romanNumeral = hundredsPlace(romanNumeral, numbers, 0);
             romanNumeral = tensPlace(romanNumeral, numbers, 1);
@@ -36,9 +43,18 @@ public class RomanNumeralConverter {
 
     }
     //M = 1,000, D = 500, C = 100, L = 50, X = 10
+    //thousands breaks patter since roman numerals do not technically go up beyond 3999
+    //this allows it to go to 9999 by adding the number of M's accordingly
+    private static String thousandsPlace (String romanNumeral, int[] numbers, int index) {
+        for (int i = 0; i < numbers[index]; i++){
+            romanNumeral = romanNumeral + "M";
+        }
+        return romanNumeral;
+    }
+    //M = 1,000, D = 500, C = 100, L = 50, X = 10
     //Need CM for 900 (ie 1000 minus 100)
     //Each one follows same pattern
-    //check the tens place number and convert it appropriately
+    //check the hundreds place number and convert it appropriately
     private static String hundredsPlace (String romanNumeral, int[] numbers, int index) {
         if(numbers[index] == 9){
             romanNumeral = romanNumeral + "CM";

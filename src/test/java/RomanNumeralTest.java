@@ -143,4 +143,48 @@ public class RomanNumeralTest {
     void ninetyGivesXC () {
         assertEquals("XC", RomanNumeralConverter.toRomanNumeral(90));
     }
+
+    @Test
+    void oneHundredGivesC () {
+        assertEquals("C", RomanNumeralConverter.toRomanNumeral(100));
+    }
+
+    @Test
+    void fiveHundredGivesXX () {
+        assertEquals("D", RomanNumeralConverter.toRomanNumeral(500));
+    }
+
+    @Test
+    void sevenHundredFiftyGivesXX () {
+        assertEquals("DCCL", RomanNumeralConverter.toRomanNumeral(750));
+    }
+
+    @Test
+    void oneThousandGivesXX () {
+        assertEquals("M", RomanNumeralConverter.toRomanNumeral(1000));
+    }
+
+    @Test
+    void sevenHundredFiftyTwo () {
+        assertEquals("DCCLII", RomanNumeralConverter.toRomanNumeral(752));
+    }
+
+    @Test
+    void oneThousandSevenHundredTwentyTwo () {
+        assertEquals("MDCCXXIV", RomanNumeralConverter.toRomanNumeral(1724));
+    }
+
+    @Test
+    void fourThousandFiveHundredTwentyTwo () {
+        assertEquals("MMMMDXXII", RomanNumeralConverter.toRomanNumeral(4522));
+    }
+
+    @Test
+    void maxFiveHundredTwentyTwo () {
+        assertEquals("MMMMMMMMMCMXCIX", RomanNumeralConverter.toRomanNumeral(9999));
+    }
+
+
+
+
 }

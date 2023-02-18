@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="RomanNumeralTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-18T14:50:49" hostname="LAPTOP-MCQCABGU" time="0.021">
+<testsuite name="RomanNumeralTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-02-18T15:01:50" hostname="LAPTOP-MCQCABGU" time="0.021">
   <properties/>
-  <testcase name="ninetyGivesXC()" classname="RomanNumeralTest" time="0.021"/>
+  <testcase name="oneThousandSevenHundredTwentyTwo()" classname="RomanNumeralTest" time="0.021"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
